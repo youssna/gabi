@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Toi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>COUCOU GABRIELA</h1>
+    </header>
+
+    <section id="introduction">
+        <p>Bienvenue sur cette page que j'ai créée rien que pour toi, parce que tu es si spéciale à mes yeux.</p>
+    </section>
+
+    <section id="souvenirs">
+        
+            <p>Chère Femme (Gabriela)
+
+        </div>
+        <!-- Ajoute d'autres souvenirs ici -->
+    </section>
+
+    <section id="qualities">
+        <h2>Ce que j'aime chez toi</h2>
+        <ul>
+            <li>Ton sourire</li>
+            <li>Ta gentillesse</li>
+            <li>Ton sens de l'humour</li>
+            <li>T'as générosité</li>
+
+
+            <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voici un quiz pour voir si tu me connais bien</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        #quiz {
+            display: none; /* Masquer le quiz par défaut */
+            background-color: #fff0f5; /* Rose clair */
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .question {
+            margin-bottom: 1.5rem;
+        }
+
+        button {
+            background-color: #ff69b4; /* Rose bonbon */
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ff1493; /* Rose vif au survol */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voyons voir si tu me connais bien</h1>
+        <nav>
+            <ul>
+                <li><button onclick="toggleQuiz()">Quiz</button></li> <!-- Bouton pour afficher le quiz -->
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+               </section>
+
+        <section id="quiz">
+            <h2>trop compliqué de ouf</h2>
+            <form id="quizForm">
+                <div class="question">
+                    <p>1. Quelle est ma marque préféré ?</p>
+                    <label><input type="radio" name="q1" value="a"> Nike</label><br>
+                    <label><input type="radio" name="q1" value="b"> Adidas</label><br>
+                    <label><input type="radio" name="q1" value="c"> Louis Vuiton</label><br>
+                </div>
+
+                <div class="question">
+                    <p>2. Quel est ma boisson préféré ?</p>
+                    <label><input type="radio" name="q2" value="a"> coca</label><br>
+                    <label><input type="radio" name="q2" value="b"> schweppes pomme</label><br>
+                    <label><input type="radio" name="q2" value="c"> cristaline pêche</label><br>
+                </div>
+
+                <div class="question">
+                    <p>3. Quel est le lieu de notre première sortie ?</p>
+                    <label><input type="radio" name="q3" value="a"> La plage</label><br>
+                    <label><input type="radio" name="q3" value="b"> Le cinéma</label><br>
+                    <label><input type="radio" name="q3" value="c"> coin perdu pas romantique du tout</label><br>
+                </div>
+
+                <button type="button" onclick="checkAnswers()">Soumettre</button>
+            </form>
+            <div id="result"></div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; le site de youssef le gros bg</p>
+    </footer>
+
+    <script>
+        function toggleQuiz() {
+            const quizSection = document.getElementById('quiz');
+            // Alterner l'affichage de la section quiz
+            if (quizSection.style.display === 'none' || quizSection.style.display === '') {
+                quizSection.style.display = 'block';
+            } else {
+                quizSection.style.display = 'none';
+            }
+        }
+
+        function checkAnswers() {
+            const answers = {
+                q1: 'a', // Réponse correcte pour la question 1
+                q2: 'b', // Réponse correcte pour la question 2
+                q3: 'c'  // Réponse correcte pour la question 3
+            };
+            
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            
+            for (const question in answers) {
+                const userAnswer = form[question].value;
+                if (userAnswer === answers[question]) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = `<h3>Gabriela Matlosz Tu as obtenu ${score} sur ${Object.keys(answers).length} !</h3>`;
+        }
+    </script>
+</body>
+       
