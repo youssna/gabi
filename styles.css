@@ -66,3 +66,18 @@ footer {
     margin-top: 2rem;
     text-align: center;
 }
+
+.video-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement, si nécessaire */
+    height: 50%; /* Ajuste selon la hauteur de la page */
+}
+
+.center-video {
+    max-width: 50%; /* Ajuste cette valeur selon tes besoins */
+    height: auto; /* Garde les proportions de la vidéo */
+    display: block; /* Assure que la vidéo soit un bloc */
+    margin: 0 auto; /* Centre la vidéo si elle est plus petite que son conteneur */
+}
+}
