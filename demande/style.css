@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); /* Plus romantique */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.step {
+    display: none; /* Tout caché par défaut */
+    animation: fadeIn 0.5s ease;
+}
+
+.step.active {
+    display: block; /* Sauf celui qui est actif */
+}
+
+h1 { color: #ff4d4d; }
+h2 { color: #764ba2; margin-top: 0; }
+.big-question { font-size: 1.8rem; color: #d32f2f; font-weight: 800; margin: 30px 0; }
+
+.question { font-size: 1.1rem; margin: 20px 0; font-weight: 600; }
+
+input {
+    width: 80%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Boutons généraux */
+.next-btn, #mash-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #764ba2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.1s, background 0.3s;
+}
+
+.next-btn:hover { background: #5a3780; }
+.next-btn:active, #mash-btn:active { transform: scale(0.95); }
+
+.error { color: #e74c3c; font-size: 0.9rem; min-height: 20px; margin-top: 5px; }
+
+/* STYLE DU JEU JAUGE */
+.instructions { font-size: 0.9rem; color: #555; background: #fff0f0; padding: 10px; border-radius: 8px; border: 1px solid #ffcccc;}
+.progress-container { width: 100%; height: 35px; background-color: #e0e0e0; border-radius: 20px; margin: 25px 0; overflow: hidden; border: 3px solid #764ba2; position: relative; }
+.progress-bar { height: 100%; width: 0%; background: linear-gradient(90deg, #ff4d4d, #ff0000); transition: width 0.1s linear; }
+#mash-btn { background-color: #ff4d4d; font-size: 1.3rem; }
+
+/* BOUTONS FINAUX OUI / NON */
+.final-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#btn-oui {
+    flex: 2; /* Le bouton Oui est plus gros */
+    padding: 15px; background: #27ae60; color: white; border: none; border-radius: 12px; font-size: 1.3rem; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+#btn-oui:hover { background: #219653; transform: scale(1.05); box-shadow: 0 5px 15px rgba(39, 174, 96, 0.4); }
+
+#btn-non {
+    flex: 1;
+    padding: 15px; background: #95a5a6; color: white; border: none; border-radius: 12px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+#btn-non:hover { background: #7f8c8d; }
+
+/* STYLE RESULTATS */
+.rdv-details {
+    background: #fff0f0;
+    text-align: left;
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    border: 2px dashed #ff4d4d;
+}
+.rdv-details p { margin: 10px 0; font-size: 1.1rem; }
+
+.meme-img { width: 100%; border-radius: 10px; margin: 20px 0; }
+.heart-icon { font-size: 5rem; animation: heartbeat 1.5s infinite; }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes heartbeat { 0% { transform: scale(1); } 15% { transform: scale(1.3); } 30% { transform: scale(1); } 45% { transform: scale(1.3); } 100% { transform: scale(1); } }
